@@ -12,6 +12,7 @@ namespace Core.Models
     }   
     public class Visitor
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime BirthDate { get; set; }
@@ -22,7 +23,8 @@ namespace Core.Models
         public DateTime MembershipYear { get; set; }
         public VisitorType Status { get; set; }
         public double AverageRating { get; set; }
-        List<string> WishList;
+        public List<Purchase> Purchases { get; set; }
+        public List<string> WishList;
 
 
     }
