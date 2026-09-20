@@ -23,8 +23,8 @@ namespace Core.Models
         public DateTime MembershipYear { get; set; }
         public VisitorType Status { get; set; }
         public double AverageRating { get; set; }
-        public List<Purchase> Purchases { get; set; }
-        public List<string> WishList;
+        public List<Purchase> Purchases { get; set; } = new List<Purchase>();
+        public List<Book> WishList { get; set; } = new List<Book>();
 
 
     }

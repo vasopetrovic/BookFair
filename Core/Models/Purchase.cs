@@ -11,6 +11,7 @@ namespace Core.Models
         public int Mark { get; set; }
         public string Comment { get; set; }
         public Visitor Visitor { get; set; }
+        public Book Book { get; set; }
 
     }
 }
