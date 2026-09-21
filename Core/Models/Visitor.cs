@@ -10,21 +10,16 @@ namespace Core.Models
         Regular,
         VIP
     }   
-    public class Visitor
+    public class Visitor : Person
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public DateTime BirthDate { get; set; }
-        public string Address { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Email { get; set; }
-        public string IDCardNumber { get; set; } //zbog 0   
+        public string MembershipNumber { get; set; } = string.Empty; //SK-1-2023
         public DateTime MembershipYear { get; set; }
         public VisitorType Status { get; set; }
-        public double AverageRating { get; set; }
         public List<Purchase> Purchases { get; set; } = new List<Purchase>();
         public List<Book> WishList { get; set; } = new List<Book>();
+
+        //izvedeno
+        public double AverageRating => Purchases.Count() == 0 ? 0 : Purchases.Average(p => p.Mark);
 
 
     }

@@ -9,9 +9,9 @@ namespace Core.Models
         public int Id { get; set; }
         public DateTime PurchaseDate { get; set; }
         public int Mark { get; set; }
-        public string Comment { get; set; }
-        public Visitor Visitor { get; set; }
-        public Book Book { get; set; }
+        public string Comment { get; set; } = string.Empty;
+        public Visitor Visitor { get; set; } = null!;
+        public Book Book { get; set; } = null!;
 
     }
 }
