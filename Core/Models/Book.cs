@@ -26,8 +26,8 @@ namespace Core.Models
         public int PublicationYear { get; set; }
         public double Price { get; set; }
         public int PageNumber { get; set; }
-        public List<Author> Authors { get; set; }
-        public Visitor Visitor { get; set; }
+        public List<Author> Authors { get; set; } = new List<Author>();
+        public Publisher Publisher { get; set; }
         public List<Visitor> BuyingVisitors { get; set; } = new List<Visitor>();
         public List<Visitor> WishingVisitors { get; set; } = new List<Visitor>();
     }
